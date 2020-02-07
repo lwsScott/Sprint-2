@@ -1,0 +1,76 @@
+document.getElementById("pizza-form").onsubmit = validate;
+
+function validate()
+{
+    //alert("Validating");
+
+    // Create a flag variable
+    let valid = true;
+
+    // Make all errors hidden
+    let errors = document.getElementsByClassName("err");
+    for (let i=0; i<errors.length; i++)
+    {
+        errors[i].style.visibility = "hidden";
+    }
+    // Check first name
+    let first = document.getElementById("firstName").value;
+    if (first == "")
+    {
+        let errFirst = document.getElementById("errFname");
+        errFirst.style.visibility = "visible";
+        valid = false;
+    }
+    // Check last name
+    let last = document.getElementById("lastName").value;
+    if (last == "")
+    {
+        let errLast = document.getElementById("errLname");
+        errLast.style.visibility = "visible";
+        valid = false;
+    }
+    // Check pickup or delivery
+    let delivery = document.getElementById("delivery").checked;
+    if (delivery)
+    {
+        // Check address
+        let address = document.getElementById("address").value;
+        if (address == "")
+        {
+            let errAddress = document.getElementById("errAddress");
+            errAddress.style.visibility = "visible";
+            valid = false;
+        }
+    }
+
+    // Check size
+    let size = document.getElementById("size").value;
+    if (size == "none")
+    {
+        let errSize = document.getElementById("errSize");
+        errSize.style.visibility = "visible";
+        valid = false;
+    }
+
+    // Check toppings
+
+    let toppings = document.getElementsByName("toppings[]");
+    let count = 0;
+        for (let i = 0; i < toppings.length; i ++)
+        {
+            if (toppings[i].checked)
+            {
+                count++;
+            }
+        }
+        //alert(count);
+        if (count == 0)
+        {
+            let errToppings = document.getElementById("errToppings");
+            errToppings.style.visibility = "visible";
+            valid = false;
+        }
+
+     return valid;
+}
+

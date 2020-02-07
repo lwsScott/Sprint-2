@@ -1,0 +1,76 @@
+<!-- Contact Section Form -->
+<div class="row">
+    <div class="col-lg-8 mx-auto " id="daysideFormcss">
+        <!-- Mailing List form -->
+        <form name="sentMessage" id="mailForm" action="confirmMail.php" method="post">
+            <fieldset class="form-group">
+                <legend>Mailing List</legend>
+                <p>Our mailing list may include leadership and management tips, quotes, blog posts, and other happenings in the field of
+                    organizational leadership.  Or, for a free quote on consultation services, click the consultation button.</p>
+                <div class="form-group row">
+                    <!-- First name -->
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label class="col-form-label text-md-right col-md-2" for="fName">First Name</label>
+                        <div class="col-md-10">
+                            <input class="form-control" id="fName" type="text" name="fName" placeholder="First name">
+                            <span class="err" id="errFname">Please enter a first name</span>
+                        </div>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <!-- Last name -->
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label class="col-form-label text-md-right col-md-2" for="lName">Last Name</label>
+                        <div class="col-md-10">
+                            <input class="form-control" id="lName" type="text" name="lName" placeholder="Last name">
+                            <span class="err" id="errLname">Please enter a last name</span>
+                        </div>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label class="col-form-label text-md-right col-md-2" for="email">Email Address</label>
+                        <div class="col-md-10">
+                            <input class="form-control" id="email" type="email" name="email"
+                                   placeholder="address@provider.com">
+                            <span class="err" id="errEmail">Please enter a valid email address</span>
+                        </div>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <!-- Phone number -->
+                <div class="form-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label class="col-form-label text-md-right col-md-2" for="phone">Phone Number</label>
+                        <div class="col-md-10">
+                            <input class="form-control" id="phone" type="tel" name="phone" placeholder="Phone Number">
+                            <span class="err" id="errPhone">Please enter a phone number</span>
+                        </div>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <!-- Message -->
+                <div class="form-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="3" name="message"
+                                  placeholder="Message"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <!-- Submit button -->
+                <div class="form-group row">
+                    <div class="offset-md-2 col-auto">
+                        <button type="submit" class="btn btn-primary btn-xl" id="mailingListButton">Mailing List</button>
+                        <a href="daysideForm2.html" class="btn btn-primary btn-xl" id="consultationButton">Consultation</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

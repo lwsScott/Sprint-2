@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DAYSIDE LLC</title>
+
+    <!-- Custom fonts for this theme -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+<div class="container">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg bg-dark text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#">
+            <img class="img" width="60" src="img/dayside-logo.jpeg" alt="logo">
+            <div class="d-inline-flex" id="logo-title">DAYSIDE LLC</div>
+        </a>
+        <!-- button with toggler classes see bootstrap 04_08
+             can put button on other side of <a></a> and it will be on other side-->
+        <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold
+            bg-primary text-white rounded" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">Menu<i class="fas fa-bars"></i>
+        </button>
+        <!-- div with collapse classes for nav items see bootstrap 04_08-->
+        <!-- <div class="navbar-nav> check if we should add>-->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About Dayside</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#services">Services</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="page-section portfolio" id="about">
+
+<br><br><br><br><br>
+
+
+
+    <form class="container" name="consultForm" id="contactForm" action="confirmConsult.php" method="post">
+        <div class="container" id="daysideFormcss">
+        <!-- Consultation form -->
+        <fieldset class="form-group">
+            <legend>Contact Info</legend>
+
+
+            <!-- First name -->
+            <div class="form-group form-inline">
+                <label class="form-control-label" for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName">
+                <span class="err" id="errFname">Please enter a first name</span>
+            </div>
+            <!-- Last name -->
+            <div class="form-group form-inline">
+                <label class="form-control-label" for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName">
+                <span class="err" id="errLname">Please enter a last name</span>
+            </div>
+            <!-- Organization -->
+            <div class="form-group form-inline">
+                <label class="form-control-label" for="org">Organization</label>
+                <input type="text" class="form-control" id="org">
+            </div>
+            <!-- City -->
+            <div class="form-group form-inline">
+                <label class="form-control-label" for="city">City</label>
+                <input type="text" class="form-control" id="city">
+            </div>
+            <!-- State -->
+            <div class="form-group form-inline">
+                <label class="form-control-label" for="state">State</label>
+                <input type="text" class="form-control" id="state">
+            </div>
+            <!-- Phone -->
+            <div class="form-group form-inline">
+                <label class="form-control-label" for="phone">Phone</label>
+                <input type="text" class="form-control" id="phone">
+                <span class="err" id="errPhone">Please enter a phone number</span>
+            </div>
+            <!-- Email -->
+            <div class="form-group form-inline">
+                <label class="form-control-label" for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Adddress@isp.com">
+                <span class="err" id="errEmail">Please enter a valid email address</span>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your phone or email with anyone else.</small>
+            </div>
+        </fieldset>
+
+        <!-- Crisis -->
+        <fieldset class="form-group">
+            <label class="d-block">Are you or your business in crisis right now?</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="crisis" id="crisisYes" value="true">
+                <label class="form-check-label" for="crisisYes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="crisis" id="crisisNo" value="false">
+                <label class="form-check-label" for="crisisNo">No</label>
+            </div>
+            <div class="form-text">
+                <label class="form-control-label" for="crisisData">If yes, please describe</label>
+                <textarea class="form-control" id="crisisData" rows="3"></textarea>
+            </div>
+
+            <!-- Industry -->
+            <div class="form-check">
+                <label class="form-control-label">What industry are you in?</label>
+                <select class="form-control" id="industry" name="industry">
+                    <option value="none">Please select an option</option>
+                    <option value="communications">Communications</option>
+                    <option value="consumer">Consumer</option>
+                    <option value="financialServices">Financial Services</option>
+                    <option value="government">Goverment</option>
+                    <option value="media">Media</option>
+                    <option value="technology">Technology</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Services -->
+        <fieldset class="form-group">
+            <div class="form-check clr-control-inline">
+                <label class="d-block">What services are you interested in?</label>
+                <input class="form-check-input" type="checkbox" id="constructiveClimate" name="services[]" value="constructiveClimate">
+                <label class="form-check-label mx-sm-2" for="constructiveClimate">Constructive Climate</label>
+                <input class="form-check-input" type="checkbox" id="leadership" name="services[]" value="leadership">
+                <label class="form-check-label mx-sm-2" for="leadership">Leadership</label>
+                <input class="form-check-input" type="checkbox" id="managingChange" name="services[]" value="managingChange">
+                <label class="form-check-label mx-sm-2" for="managingChange">Managing Change</label>
+                <input class="form-check-input" type="checkbox" id="morale" name="services[]" value="morale">
+                <label class="form-check-label mx-sm-2" for="morale">Morale</label>
+                <input class="form-check-input" type="checkbox" id="organizationalCommunication" name="services[]" value="organizationalCommunication">
+                <label class="form-check-label mx-sm-2" for="organizationalCommunication">Organizational Communication</label>
+                <input class="form-check-input" type="checkbox" id="teamEffectiveness" name="services[]" value="teamEffectiveness">
+                <label class="form-check-label" for="teamEffectiveness">Team Effectiveness</label>
+            </div>
+        </fieldset>
+
+        <!-- Referral source -->
+        <fieldset class="form-group">
+            <div class="form-check">
+                <label class="form-control-label">How did you hear about us?</label>
+                <select class="form-control" name="referral">
+                    <option value="none">Please select an option</option>
+                    <option value="online">Online</option>
+                    <option value="businessAssociate">Business Associate</option>
+                    <option value="friend">Friend</option>
+                    <option value="coworker">Co-worker</option>
+                    <option value="socialMedia">Social Media</option>
+                    <option value="formerClient">Former Dayside Client</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <!-- Consultation format -->
+        <fieldset class="form-group">
+            <label class="d-block" >What is your preferred consultation format?</label>
+            <div class="form-check" id="form-check2">
+                <input class="form-check-input" type="radio" name="consult" id="solo" value="solo">
+                <label class="form-check-label" for="solo">One-on-One</label>
+            </div>
+            <div class="form-check" id="form-check3">
+                <input class="form-check-input" type="radio" name="consult" id="group" value="group">
+                <label class="form-check-label" for="group">Group</label>
+            </div>
+            <div class="form-check" id="form-check4">
+                <input class="form-check-input" type="radio" name="consult" id="unsure" value="unsure" checked>
+                <label class="form-check-label" for="unsure">Uncertain</label>
+            </div>
+        </fieldset>
+
+        <h3>All information is kept strictly confidential!</h3>
+            <br>
+
+
+        <!-- Submit button -->
+        <div class="form-group row">
+            <div class="offset-md-5 col-auto">
+                <button type="submit" class="btn btn-primary btn-xl" id="consultButton">Submit</button>
+            </div>
+        </div>
+        </div>
+    </form>
+</section>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/freelancer.min.js"></script>
+<script src="js/validateConsult.js"></script>
+
+
+</div>
+</body>
+
+</html>
